@@ -1,0 +1,640 @@
+/*gallery page*/
+/*This overflow is called to set what shows when content overflows. 
+  The hidden is called on the property to set the visibity as hidden*/
+body {    
+    overflow-x: hidden;
+    font-family: 'Playfair Display SC', serif;
+}
+
+/*transition of the instruction text from the center to the bottom left.*/
+@keyframes slideFromCenter {
+  0% {
+    transform: translate(-30vw, -50vh);
+  }
+    50% {
+        
+    transform: translate(-30vw, -50vh);
+        
+    }
+    100% {
+    transform: translate(0, 0);
+  }
+}
+
+/*This is the instruction text*/
+h2 {
+    position : fixed;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 5px;
+    width: 25vw;
+    bottom: -13px;
+    right: 0px;
+    color:black;
+    background-color: azure;
+    animation: slideFromCenter;
+    animation-duration: 4s;
+    z-index: 100;
+    opacity: 1;
+}
+
+/*This affects every img in the gallery page*/
+img {               
+    width: 100%;    
+}
+
+/*This div affects every picture*/
+div {                           
+    position: absolute;         
+    opacity: 0;                 
+    transition-duration: 5s;    
+}
+
+/*This div hover affects every picture*/
+div:hover {                       
+    opacity: 1;                  
+    transition-duration: 0.3s;    
+}
+
+/*black and white background image*/
+.gallery_background {       
+    width: 100vw;         
+    top: 0vw;              
+    left: 0vw;             
+    opacity: 1;           
+}
+
+/*how_to_art navbar*/
+.how_to_art {           
+    width: 30.68vw;     
+    top: 1.5vw;       
+    left: -0.3vw;         
+}
+
+/*About navbar*/
+.about {               
+    width: 18.7vw;      
+    top: 1.2vw;         
+    left: 28.95vw;       
+}
+
+/*Lessons navbar*/
+.lessons {               
+    width: 19.65vw;       
+    top: 0.87vw;          
+    left: 45.95vw;        
+}
+
+/*instant_inspo navbar*/
+.instant_inspo {         
+    width: 18.8vw;     
+    top: 0.5vw;          
+    left: 62.9vw;        
+}
+
+/*Gallery navbar*/
+.gallery {            
+    width: 19.8vw;   
+    top: 0.25vw;          
+    left: 78.9vw;        
+}
+
+/*submissions content image*/
+.submissions {           
+    width: 67.85vw;  
+    top: 73.8vw;        
+    left: 16.3vw;        
+}
+
+/*text about the "direction of submitting artworks"*/
+.submissions_text {
+    z-index: -10;
+    opacity: 0;
+}
+
+/*set the text for submissions to invisible*/
+.submissions_text:hover{
+    z-index: -10;
+    opacity: 0;
+}
+
+/*this is for all artworks*/
+.artwork {         
+    width: 0vw;   
+}
+
+/*1st student's artwork image*/
+.art1 {                   
+    width: 13.8vw;       
+    top: 45.3vw;          
+    left: 0.9vw;          
+    z-index: 10;          
+}
+
+/*polar_bear image*/
+.polar_bear {
+    position: absolute;
+    width: 7.02vw;       
+    top: 60vw;  /*60*/          
+    left: 5.1vw;     /*5.1*/     
+    z-index: 0;
+    opacity:0;
+    transform: rotate(320deg);
+    transition-duration: 0.1s;
+}
+
+/*text under the bear*/
+.text_bear {
+    position: absolute;
+    top: 7vw;                 
+    left: 35vw;
+    width: 30vw;
+    z-index: 0;
+    opacity:0;
+    transition-duration: 0.1s;
+}
+
+/*makes the text for bear hover invisible*/
+.text_bear:hover {
+    opacity: 0;
+}
+
+/*Text zoom in on the bear when art1 is clicked*/
+.art1:active > .text_bear { 
+    text-align: center;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+/*zoom in the polar bear when art1 is clicked*/  
+.art1:active + .polar_bear {     
+    width: 20vw;                
+    top: 25vw;                  
+    left: 41vw;                 
+    z-index: 15;
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 1s;
+}
+
+/*2nd student's artwork image*/
+.art2 {                    
+    width: 11.3vw;        
+    top: 35.8vw;           
+    left: 12.6vw;          
+    z-index: 10;           
+}
+
+/*alicorn image*/
+.alicorn {
+    position: absolute;
+    width: 6.72vw;         
+    top: 45vw;             
+    left: 15.5vw;         
+    z-index: 0;
+    opacity: 0;
+    transform: rotate(310deg);
+    transition-duration: 0.1s;
+}
+
+/*text under the alicorn*/
+.text_alicorn {
+    position: absolute;
+    top: 20vw;                  
+    left: 30vw;
+    width: 20vw;
+    z-index: 0;
+    opacity:0;
+    transition-duration: 0.1s;
+}
+
+/*makes the text for alicorn hover invisible*/
+.text_alicorn:hover {
+    opacity: 0;
+}
+
+/*zoom in on the text for alicorn when art2 is clicked*/ 
+.art2:active > .text_alicorn {
+    text-align: center;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+/*zoom in the alicorn when art2 is clicked*/  
+.art2:active + .alicorn {       
+    width: 40vw;                
+    top: 25vw;                  
+    left: 30vw;                 
+    z-index: 15;
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 1s;
+}
+
+/*3rd student's artwork image*/
+.art3 {                
+    width: 7.2vw;     
+    top: 28.2vw;       
+    left: 21.85vw;       
+    z-index: 10;       
+}
+
+/*sun_moon image*/
+.sun_moon {
+    position: absolute;
+    width: 4.27vw;       
+    top: 36.36vw;            
+    left: 24.3vw;         
+    z-index: 0;
+    opacity: 0;
+    transform: rotate(330deg);
+    transition-duration: 0.1s;
+}
+
+/*text under the sun_moon*/
+.text_sun_moon {
+    position: absolute;
+    top: 27vw;                  
+    left: 20vw;
+    width: 30vw;
+    z-index: 0;
+    opacity:0;
+    transition-duration: 0.1s;
+}
+
+/*makes the text for sun_moon hover invisible*/
+.text_sun_moon:hover {
+    opacity: 0;
+}
+
+/*zoom in on the text for sun_moon when art3 is clicked*/ 
+.art3:active > .text_sun_moon {  
+    text-align: center;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+/*zoom in the sun_moon when art3 is clicked*/  
+.art3:active + .sun_moon {    
+    width: 40vw;              
+    top: 25vw;                
+    left: 35vw;               
+    z-index: 15;
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 1s;
+}
+
+/*4th student's artwork image*/
+.art4 {                
+    width: 11.2vw;   
+    top: 22.4vw;     
+    left: 29.6vw;     
+    z-index: 10;      
+}
+
+/*white_fox image*/
+.white_fox {
+    position: absolute;
+    width: 4.27vw;           
+    top: 27.36vw;            
+    left: 33.3vw;           
+    z-index: 0;
+    opacity: 0;
+    transition-duration: 0.1s;
+}
+
+/*text under the white_fox*/
+.text_white_fox {
+    position: absolute;
+    top: 33vw;                  
+    left: 11vw;
+    width: 30vw;
+    z-index: 0;
+    opacity:0;
+    transition-duration: 0.1s;
+}
+
+/*makes the text for white fox hover invisible*/
+.text_white_fox:hover {
+    opacity: 0;
+}
+
+/*zoom in on the text for white_fox when art4 is clicked*/  
+.art4:active > .text_white_fox {   
+    text-align: center;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+/*zoom in the white_fox when art2 is clicked*/  
+.art4:active + .white_fox {    
+    width: 40vw;              
+    top: 25vw;                 
+    left: 35vw;                
+    z-index: 15;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+/*5th student's artwork image*/
+.art5 {               
+    width: 11.75vw;    
+    top: 21.2vw;      
+    left: 43vw;      
+    z-index: 10;       
+}
+
+/*sword image*/
+.sword {
+    position: absolute;
+    width: 4.27vw;           
+    top: 27.15vw;            
+    left: 47.7vw;            
+    z-index: 0;
+    opacity: 0;
+    transition-duration: 0.1s;
+}
+
+/*text under the sword*/
+.text_sword {
+    position: absolute;
+    top: 35vw;                  
+    left: -3vw;
+    width: 30vw;
+    z-index: 0;
+    opacity:0;
+    transition-duration: 0.1s;
+}
+
+/*makes the text for sword hover invisible*/
+.text_sword:hover {
+    opacity: 0;
+}
+
+/*zoom in on the text for sword when art5 is clicked*/  
+.art5:active > .text_sword {   
+    text-align: center;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+/*zoom in on the sword when art5 is clicked*/  
+.art5:active + .sword {        
+    width: 25vw;               
+    top: 25vw;                
+    left: 42vw;                
+    z-index: 15;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+/*6th student's artwork image*/
+.art6 {                
+    width: 4.9vw;     
+    top: 16vw;       
+    left: 55.5vw;     
+    z-index: 10;       
+}
+
+/*city image*/
+.city {
+    position: absolute;
+    width: 2vw;             
+    top: 25.9vw;            
+    left: 58.35vw;          
+    z-index: 0;
+    opacity: 0;
+    transform: rotate(330deg);
+    transition-duration: 0.1s;
+}
+
+/*text under the city*/
+.text_city {
+    position: absolute;
+    top: 40vw;                  
+    left: -13vw;
+    width: 30vw;
+    z-index: 0;
+    opacity:0;
+    transition-duration: 0.1s;
+}
+
+/*makes the text for city hover invisible*/
+.text_city:hover {
+    opacity: 0;
+}
+
+/*zoom in on the text for city when art6 is clicked*/   
+.art6:active > .text_city {  
+    text-align: center;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+/*zoom in the city when art6 is clicked*/  
+.art6:active + .city {       
+    width: 40vw;             
+    top: 25vw;               
+    left: 37vw;              
+    z-index: 15;
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 1s;
+}
+
+/*7th student's artwork image*/
+.art7 {                
+    width: 10.25vw;   
+    top: 16.6vw;       
+    left: 61.75vw;      
+    z-index: 10;       
+}
+
+/*galaxy image*/
+.galaxy {
+    position: absolute;
+    width: 4.27vw;           
+    top: 22.15vw;            
+    left: 65.7vw;            
+    z-index: 0;
+    opacity: 0;
+    transition-duration: 0.1s;
+}
+
+/*text under the galaxy*/
+.text_galaxy {
+    position: absolute;
+    top: 39vw;                  
+    left: -20vw;
+    width: 20vw;
+    z-index: 0;
+    opacity:0;
+    transition-duration: 0.1s;
+}
+
+/*makes the text for galaxy hover invisible*/
+.text_galaxy:hover {
+    opacity: 0;
+}
+
+/*zoom in on the text for galaxy when art7 is clicked*/  
+.art7:active > .text_galaxy {     
+    text-align: center;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+/*zoom in the galaxy when art7 is clicked*/  
+.art7:active + .galaxy {       
+    width: 40vw;               
+    top: 25vw;                 
+    left: 30vw;                
+    z-index: 15;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+/*8th student's artwork image*/
+.art8 {                
+    width: 9.75vw;     
+    top: 16.1vw;         
+    left: 72.6vw;      
+    z-index: 10;       
+}
+
+/*bird image*/
+.bird {
+    position: absolute;
+    width: 4.27vw;           
+    top: 20vw;            
+    left: 76vw;            
+    z-index: 0;
+    opacity: 0;
+    transition-duration: 0.1s;
+}
+
+/*text under the bird*/
+.text_bird {
+    position: absolute;
+    top: 43vw;                  
+    left: -32vw;
+    width: 20vw;
+    z-index: 0;
+    opacity:0;
+    transition-duration: 0.1s;
+}
+
+/*makes the text for bird hover invisible*/
+.text_bird:hover {
+    opacity: 0;
+}
+
+/*zoom in on the text for bird when art8 is clicked*/  
+.art8:active > .text_bird {     
+    text-align: center;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+/*zoom in the bird when art8 is clicked*/  
+.art8:active + .bird {       
+    width: 25vw;               
+    top: 25vw;                 
+    left: 38vw;                
+    z-index: 15;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+/*9th student's artwork image*/
+.art9 {                
+    width: 8.95vw;     
+    top: 13.1vw;       
+    left: 87.2vw;     
+    z-index: 10;       
+}
+
+/*bts image*/
+.bts {
+    position: absolute;
+    width: 4vw;             
+    top: 26.9vw;            
+    left: 91vw;             
+    z-index: 0;
+    opacity: 0;
+    transform: rotate(25deg);
+    transition-duration: 0.1s;
+}
+
+/*text under the bts*/
+.text_bts {
+    position: absolute;
+    top: 46vw;                  
+    left: -51vw;
+    width: 30vw;
+    z-index: 0;
+    opacity:0;
+    transition-duration: 0.1s;
+}
+
+/*makes the text for bts hover invisible*/
+.text_bts:hover {
+    opacity: 0;
+}
+
+/*zoom in on the text for bts when art9 is clicked*/  
+.art9:active > .text_bts {  
+    text-align: center;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+
+/*zoom in the bts when art9 is clicked*/  
+.art9:active + .bts {          
+    width: 25vw;              
+    top: 25vw;                
+    left: 39vw;               
+    z-index: 15;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition-duration: 1s;
+}
+
+/*1st wall image*/
+.wall1 {                 
+    width: 31.25vw;      
+    top: 14.5vw;       
+    left: 0vw;           
+    z-index: 5;
+}
+
+/*2nd wall image*/
+.wall2 {               
+    width: 34.5vw;    
+    top: 8.55vw;         
+    left: 27.4vw;         
+    z-index: 5;
+}
+
+/*3rd wall image*/
+.wall3 {               
+    width: 23.8vw;   
+    top: 13.4vw;         
+    left: 60.02vw;         
+}
+
+/*4th wall image*/
+.wall4 {                  
+    width: 16.69vw;       
+    top: 10.6vw;          
+    left: 83.3vw;         
+}
+
+/*floor image*/
+.floor{                   
+    width: 73vw;       
+    top: 36.3vw;          
+    left: 20.8vw;         
+}

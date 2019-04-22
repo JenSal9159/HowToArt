@@ -1,0 +1,170 @@
+/*about page*/
+/*This overflow is called to set what shows when content overflows. 
+  The hidden is called on the property to set the visibity as hidden*/
+body {    
+    overflow-x: hidden; 
+}
+
+/*This affects every img in the about page*/
+img {               
+    width: 100%;    
+}
+
+/*This div affects every picture*/
+div {                          
+    position: absolute;         
+    opacity: 0;                 
+    transition-duration: 5s;    
+}
+
+/*This div hover affects every picture*/
+div:hover {                       
+    opacity: 1;                  
+    transition-duration: 0.3s;   
+}
+
+/*black and white background image*/
+.about_background {       
+    width: 100vw;          
+    top: 0vw;             
+    left: 0vw;             
+    opacity: 1;            
+}
+
+/*how_to_art navbar*/
+.how_to_art {             
+    width: 26.28vw;     
+    top: 0vw;       
+    left: 0vw;          
+}
+
+/*About navbar*/
+.about {                
+    width: 22.09vw;      
+    top: 0vw;        
+    left: 25.45vw;       
+}
+
+/*Lessons navbar*/
+.lessons {                
+    width: 20.57vw;       
+    top: 0vw;          
+    left: 46.4vw;        
+}
+
+/*instant_inspo navbar*/
+.instant_inspo {          
+    width: 19.02vw;      
+    top: 0vw;          
+    left: 64.6vw;        
+}
+
+/*Gallery navbar*/
+.gallery {            
+    width: 17.66vw;   
+    top: 0vw;         
+    left: 82.3vw;       
+}
+
+/*title image*/
+.title {               
+    width: 74.91vw;    
+    top: 13.55vw;          
+    left: 18.2vw;       
+}
+
+/*samyra portrait image*/
+.samyra {              
+    width: 31.99vw;    
+    top: 36.15vw;          
+    left: 0vw;        
+}
+
+/*anchor link*/
+#samyra_linked {
+    top: 35vw;          
+    left: 0vw;
+}
+
+/*picture of content about samyra*/
+.about_samyra {               
+    width: 71.17vw;    
+    top: 34.3vw;          
+    left: 28.8vw;       
+}
+
+/*text about samyra*/
+.about_samyra_text{
+    z-index: -10;
+    opacity: 0;
+}
+
+/*set the text about samyra to invisible*/
+.about_samyra_text:hover{
+    z-index: -10;
+    opacity: 0;
+}
+
+/*jenny portrait image*/
+.jenny {              
+    width: 31.87vw;   
+    top: 68.05vw;          
+    left: 65.15vw;       
+}
+
+/*anchor link*/
+#jenny_linked {
+    top: 66.05vw;          
+    left: 65.15vw;
+}
+
+/*picture of content about jenny*/
+.about_jenny {               
+    width: 68.01vw;    
+    top: 65.65vw;         
+    left: 0vw;        
+}
+
+/*text about jenny*/
+.about_jenny_text{
+    z-index: -10;
+    opacity: 0;
+}
+
+/*set the text about jenny to invisible*/
+.about_jenny_text:hover{
+    z-index: -10;
+    opacity: 0;
+}
+
+/*andy portrait image*/
+.andy {               
+    width: 39.06vw;    
+    top: 101.95vw;          
+    left: 0vw;        
+}
+
+/*anchor link*/
+#andy_linked {
+    top: 101.95vw;          
+    left: 0vw; 
+}
+
+/*picture of content about andy*/
+.about_andy {               
+    width: 72.65vw;    
+    top: 96.67vw;
+    left: 27.31vw;        
+}
+
+/*text about andy*/
+.about_andy_text{  
+    z-index: -10;
+    opacity: 0;
+}
+
+/*set the text about andy to invisible*/
+.about_andy_text:hover{
+    z-index: -10;
+    opacity: 0;
+}
