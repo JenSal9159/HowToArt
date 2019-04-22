@@ -8,13 +8,11 @@ body {
 
 /*transition of the instruction text from the center to the bottom left.*/
 @keyframes slideFromCenter {
-  0% {
+    0% {
     transform: translate(-30vw, -50vh);
-  }
-    50% {
-        
+    }
+    50% {    
     transform: translate(-30vw, -50vh);
-        
     }
     100% {
     transform: translate(0, 0);
@@ -135,8 +133,8 @@ div:hover {
 .polar_bear {
     position: absolute;
     width: 7.02vw;       
-    top: 60vw;  /*60*/          
-    left: 5.1vw;     /*5.1*/     
+    top: 60vw;            
+    left: 5.1vw;          
     z-index: 0;
     opacity:0;
     transform: rotate(320deg);
@@ -145,13 +143,9 @@ div:hover {
 
 /*text under the bear*/
 .text_bear {
-    position: absolute;
-    top: 7vw;                 
-    left: 35vw;
-    width: 30vw;
-    z-index: 0;
     opacity:0;
-    transition-duration: 0.1s;
+    transition-duration: 0s; 
+    width: 30vw;
 }
 
 /*makes the text for bear hover invisible*/
@@ -160,8 +154,10 @@ div:hover {
 }
 
 /*Text zoom in on the bear when art1 is clicked*/
-.art1:active > .text_bear { 
+.art1:active > .text_bear {  
     text-align: center;
+    top: 7vw;                  
+    left: 35vw;
     opacity: 1;
     transition-duration: 1s;
 }
